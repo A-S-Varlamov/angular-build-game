@@ -1,0 +1,38 @@
+<div class="container">
+    <h2 [ngStyle]="{
+        color: param.length < 5 ? 'red' : 'green'
+    }" class="param">{{index}} {{card.title}} {{mans.man1}}!</h2>
+    <p>{{card.text}}</p>
+    <button (click)="changeTitle()" >Change man</button>
+    <button (click)="mans.man1 = 'Петя';" >Change man</button>
+ </div>
+
+ <label
+    [class.yellow]=" textColor === 'yellow'"
+    [class.black]=" textColor === 'black'"
+    [class.pink]=" textColor === 'pink'"
+ > Текст меняет цвет </label>
+
+ <label [ngClass]="{
+    yellow: textColor === 'yellow',
+    black: textColor === 'black',
+    pink: textColor === 'pink'} "> Текст меняет цвет </label>
+
+ <div>
+   <label>
+     <input type="text" #myinput (input)="inputHandler(myinput.value)" [value] = "param">
+   </label>
+ </div>
+
+ <div>
+   <label>
+     <input type="text" [(ngModel)]="param" >
+   </label>
+ </div>
+
+<div>
+    <button (click)="textColor = 'black'" >Change color</button>
+    <button (click)="textColor = 'yellow'" >Change color</button>
+    <button (click)="textColor = 'pink'" >Change color</button>
+</div>
+
