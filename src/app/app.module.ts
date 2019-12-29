@@ -1,16 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { GameComponent } from './game/game.component';
+import { AreaComponent } from './area/area.component';
+import { TendersComponent } from './tenders/tenders.component';
+import { WorldComponent } from './world/world.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GameComponent,
+    AreaComponent,
+    TendersComponent,
+    WorldComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
