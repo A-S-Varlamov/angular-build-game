@@ -9,27 +9,11 @@
         </div>
       </div>
       <div class="col-sm-6">
-        <img src="assets/img/gold.png" height="40" width="40" title="золото"/>
-        <strong>{{ dataService.money | number: '3.2-2'}}</strong>
-        &nbsp;&nbsp;
-        <img src="assets/img/food.png" height="40" width="40" title="еда"/>
-          <strong>{{ dataService.food | number }}</strong>
-        &nbsp;&nbsp;
-        <img src="assets/img/wood.png" height="40" width="40" title="дерево"/>
-          <strong>{{ dataService.wood | number }}</strong>
-        &nbsp;&nbsp;
-        <img src="assets/img/stone.png" height="40" width="40" title="камень"/>
-          <strong>{{ dataService.stone | number }}</strong>
-        &nbsp;&nbsp;
-        <img src="assets/img/horse.png" height="40" width="40" title="лошади"/>
-          <strong>{{ dataService.horse | number }}</strong>
-        &nbsp;&nbsp;
-        <img src="assets/img/weapon.png" height="40" width="40" title="оружие"/>
-          <strong>{{ dataService.weapon | number }}</strong>
+      <h6>{{this.dataService.title}}</h6>
 
       </div>
       <div class="col-sm-3">
-        <button class="btn btn-primary float-right">построить <i class="fa fa-wrench"></i></button>
+
       </div>
     </div>
   </div>
@@ -38,13 +22,14 @@
     <div class="row">
       <div class="col-sm-3">
         <div class="block">
+          <i class="fa fa-money"></i><a> - {{dataService.money | number }} </a><br>
           <i class="fa fa-male"></i><a> - {{dataService.allMans}} </a>
           <button class="btn btn-outline-success" (click)="buyWorker()">{{dataService.priceMan}}</button><br>
           <a>занятые </a><i class="fa fa-male"></i><a> - {{dataService.workMans}}</a><br>
           <i class="fa fa-truck"></i><a> - {{dataService.allTrucks}} </a>
           <button class="btn btn-outline-success" (click)="buyTruck()">{{dataService.priceTruck}}</button><br>
           <a>занятые </a><i class="fa fa-truck"></i><a> - {{dataService.workTrucks}}</a><br>
-          <i class="fa fa-cubes"></i><a> - {{dataService.allMaterials | number: '3.2-2'}} </a>
+          <i class="fa fa-cubes"></i><a> - {{dataService.allMaterials | number: '2.2-2'}} </a>
           <button class="btn btn-outline-success" (click)="buyMaterials()">{{dataService.priceMaterial}}</button><br>
         </div>
       </div>
@@ -60,11 +45,6 @@
       </div>
       <div class="col-sm-3">
         <div class="block">
-          <h6>{{this.dataService.activeObj.obj.name}}</h6>
-          <div *ngIf="this.dataService.activeObj.obj.count">
-            <a>{{this.dataService.activeObj.obj.count}}</a>
-            <button class="btn btn-success">собрать</button>
-          </div>
 
         </div>
       </div>

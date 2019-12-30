@@ -10,7 +10,7 @@ import {TimerService} from '../services/timer.service';
 
 export class GameComponent {
 
-  constructor( private dataService: DataService, private timerService: TimerService ) {
+  constructor(private dataService: DataService, private timerService: TimerService) {
   }
 
   // нанять строителя
@@ -40,4 +40,5 @@ export class GameComponent {
   log(s) {
     console.log(s);
   }
+
 }

@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { GameComponent } from './game/game.component';
 import { AreaComponent } from './area/area.component';
 import { TendersComponent } from './tenders/tenders.component';
-import { WorldComponent } from './world/world.component';
 
 
 @NgModule({
@@ -14,8 +13,7 @@ import { WorldComponent } from './world/world.component';
     AppComponent,
     GameComponent,
     AreaComponent,
-    TendersComponent,
-    WorldComponent
+    TendersComponent
   ],
   imports: [
     BrowserModule,

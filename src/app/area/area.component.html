@@ -7,7 +7,7 @@
         <h6><i class="fa fa-money"></i> {{iterArea.cost}}, <i class="fa fa-clock-o"></i> {{iterArea.buildTime}}</h6>
         <hr>
         <a>объем стр-ва: {{iterArea.level}}</a><br>
-        <a>построено: {{iterArea.build  | number: '3.2-2'}}%</a><br>
+        <a>построено: {{iterArea.build  | number}}%</a><br>
         <a>строителей: {{iterArea.mans}} </a><br>
         <div class="btn-group">
           <button class="btn btn-outline-success" (click)="addWorker(iterArea, true)">+++</button>
@@ -16,7 +16,7 @@
           <button class="btn btn-outline-danger" (click)="delWorker(iterArea, true)">---</button>
         </div>
         <hr>
-        <a><i class="fa fa-cubes"></i> - {{iterArea.materials  | number: '3.2-2'}}%  |  </a>
+        <a><i class="fa fa-cubes"></i> - {{iterArea.materials  | number}}%  |  </a>
         <a><i class="fa fa-truck"></i> - {{iterArea.trucks}} </a><br>
         <div class="indikator" [style.background]="getBackgroundIndicator(iterArea)"></div>
         <div class="btn-group">
